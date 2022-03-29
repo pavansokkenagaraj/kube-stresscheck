@@ -56,6 +56,9 @@ metadata:
   labels:
     app: kube-stresscheck
 spec:
+  selector:
+    matchLabels:
+      app: kube-stresscheck
   replicas: 1
   template:
     metadata:
