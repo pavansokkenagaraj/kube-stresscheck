@@ -30,7 +30,7 @@ kind: ServiceAccount
 metadata:
   name: kube-stresscheck
 ---
-apiVersion: extensions/v1beta1
+apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
   name: kube-stresscheck-psp
@@ -49,7 +49,7 @@ spec:
   - 'secret'
 ---
 kind: DaemonSet
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1beta1
 metadata:
   name: kube-stresscheck
   namespace: kube-system
